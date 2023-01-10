@@ -39,7 +39,11 @@ android {
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-build-configuration.
         minSdkVersion flutter.minSdkVersion
         targetSdkVersion flutter.targetSdkVersion
+<<<<<<< HEAD
         versionCode 40
+=======
+        versionCode 17
+>>>>>>> 65569f47b3c9784929f9671839be2292c2544e54
         versionName '1.0.0'
         /// change your app name
         setProperty("archivesBaseName", "flutter_boiler")

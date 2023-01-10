@@ -46,7 +46,7 @@ jobs:
   container-test-job:
     runs-on: ubuntu-latest
     container:
-      image: cirrusci/flutter
+      image: panhpc/flutter_fastlane
       env: 
         DIAWI_TOKEN: "${{ secrets.DIAWI_TOKEN }}"
         EMAIL_CALLBACK: "${{ secrets.EMAIL_CALLBACK }}"

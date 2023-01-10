@@ -51,5 +51,7 @@ jobs:
         DIAWI_TOKEN: "${{ secrets.DIAWI_TOKEN }}"
         EMAIL_CALLBACK: "${{ secrets.EMAIL_CALLBACK }}"
     steps:
+      - uses: actions/checkout@v2
+        name: Check out the code
       - name: Check for dockerenv file
         run: flutter pub get && flutter build apk --flavor prod -t lib/main_prod.dart && fastlane android deploy_prod

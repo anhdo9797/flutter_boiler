@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  dockerplatform:
+
+    image: panhpc/flutter_fastlane
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+
+    volumes:
+      - ../:/home/project
+
+    command:
+      - /bin/sh
+      - -c
+      - |
+        flutter clean
+        flutter pub get 
+        bundle install
+        fastlane android deploy --env dev

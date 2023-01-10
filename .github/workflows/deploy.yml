@@ -55,6 +55,6 @@ jobs:
         name: Check out the code
       - name: Check for dockerenv file
         run:  |
-        - flutter pub get && flutter build apk --flavor prod -t lib/main_prod.dart 
-        - bundle install
-        - fastlane android deploy_prod
+          flutter pub get && flutter build apk --flavor prod -t lib/main_prod.dart 
+          bundle install
+          fastlane android deploy_prod

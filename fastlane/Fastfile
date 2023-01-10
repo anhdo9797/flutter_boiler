@@ -35,16 +35,16 @@ platform :android do
         
         build()
          
-        push(versionCode: versionCode)
         
         diawi(
             token: ENV["DIAWI_TOKEN"],
             file: outputPath,
             callback_emails: ENV["EMAIL_CALLBACK"]
-        )
-        
+            )
+            
         UI.success("Build success version: #{versionCode}")
         UI.success("Output path: #{outputPath}")
+        # push(versionCode: versionCode)
     end
 
     desc 'Push new versions'
